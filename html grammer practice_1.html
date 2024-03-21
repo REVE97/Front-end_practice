@@ -91,8 +91,19 @@
         <input type ="range" name="range" min="0" max="100" step="10"><br><br>
         <input type ="date" name="date"><br><br>
 
-
-
+        <!-- 다양한 입력 요소들 ( 인라인 요소 )-->
+        <!-- 1. select : 다수의 옵션을 포함할 수 있는 요소( tag : option ) name 식별자로 구분 , option 에 value 속성을 지정할 수 있음-->
+        <!-- 2. textarea : 여러 줄의 일반 텍스르르 입력할 수 있는 요소 , name 식별자로 구분 -->
+        <hr>
+        <h1>다양한 입력 요소들</h1><br>
+        <select name="animal" multiple> <!-- multiple 이라는 속성을 추가하여 ctrl 를 누른상태로 클릭하여 중복 선택 가능 -->
+            <option value="dog" selected>강아지</option> <!-- selected 이라는 속성을 추가하여 이미 선택한 요소상태로 시작됨-->
+            <option value="cat">고양이</option>
+            <option value="hamster">햄스터</option>
+            <option value="panda">팬더</option>
+        </select>
+        <br><br>
+        <textarea name="content" rows="10" cols="10">기본적으로 쓰여 있는 텍스트</textarea> <!-- rows,cols 속성을 통해 행렬을 정할 수 있음-->
 
 
 
