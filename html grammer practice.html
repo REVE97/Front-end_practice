@@ -3,8 +3,21 @@
 <!DOCTYPE html> <!-- 문서의 형식이 html 이라는 것을 의미 -->
 <html lang="en">
     <head> <!-- 문서의 정보를 입력하는 태그-->
-        <meta charset="UTF-8"> <!-- 문자 인코딩 및 문서 키워드 등에 대한 요약 정보를 기입하는 단일 태그-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- meta 태그 : HTML 문서에 대한 메타데이터를 정의 ( 메타데이터 : 데이터에 대한 데이터 , 즉 '정보'를 의미) -->
+        <!-- meta 태그는 항상 head 태그의 안에 들어가며, 일반적으로 문자 세트, 페이지 설명, 키워드, 문서의 작성자 및
+             뷰포트 설정을 지정하는 데 사용함 -->
+        <!-- 웹페이지에 대한 정보를 제공하므로 검색엔진이 페이지를 검색할 때 참고할 수 있고, 검색 결과에도 반영할 수 있음-->
+        
+        <meta charset="UTF-8"> <!-- charset : 문자 세트 ( 문자 인코딩에 대한 요약 정보를 기입하는 속성 ) -->
+        <!--http-equiv : 콘텐츠 속성 정보에 대한 http 헤더 -->
+        <!-- name: 문서 정보 , content: 메타데이터 내용-->
+        <!-- viewport 란 현재 화면에 보여지고 있는 영역을 의미 -->
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport의 너비를 단말기에 맞추고, 초기 배율을 1로 설정함-->
+        <meta name="author" content="REVE97">
+        <meta name="keywords" content="메타태그 학습">
+        <meta name="description" content="메타태그를 추가하는 방법">
         <title>html grammer practice</title> <!-- 문서의 제목을 나타냄-->
     </head>
     <body> <!-- 실제 브라우저 화면에 표시될 내용을 입력하는 태그 -->
@@ -105,8 +118,31 @@
         <br><br>
         <textarea name="content" rows="10" cols="10">기본적으로 쓰여 있는 텍스트</textarea> <!-- rows,cols 속성을 통해 행렬을 정할 수 있음-->
 
+        <!-- 폼 태그 -->
+        <!-- form 은 입력 요소들을 감싸며, 입력 값을 서버 측으로 제출할 수 있음-->
+        <!-- form 의 입력값을 제출하기 위해 input 태그의 submit 타입을 사용 -->
+        <!-- form 의 속성 => action : 입력값을 전송할 서버의 url , method : 클라이언트가 입력한 데이터를 어떤 식으로 
+             전송할 지 ( GET or POST ) -->
+        <!-- GET  vs POST -->
+        <!-- GET : 서버에 요청을 보내어 응답을 받아낸다 , 서버로부터 정보를 '가져오겠다' 는 성격의 요청-->
+        <!-- POST : 서버에 요청을 보내어 작업을 수행한다 , 서버에 있는 데이터를 추가/수정/삭제 한 후에 응답을 받아냄,
+            서버의 정보를 '조작하겠다' 는 성격의 요청-->
+        <br>
+        <hr>
+        <h1>키우고 싶은 동물 고르기</h1>
+        <form action = "exam.php" method="POST">
+            <input type = "text" placeholder="NAME" name="name">
+            <br>
+            <select name="pet">
+                <option value="dog">강아지</option>
+                <option value="cat">고양이</option>
+                <option value="parrot">앵무새</option>
+            </select>
+            <br>
+            <input type="submit" value="전송">
+        </form>
 
-
+    
 
     </body>
 </html>
