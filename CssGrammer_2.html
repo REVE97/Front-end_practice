@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grammer Practice 2</title>
+
+    <style>
+    
+        #example_1{
+            width:300px; height:100px;
+            border-color:gray;
+            border-width:10px;
+            border-style:dashed;
+            padding:30px;
+            margin:20px;
+        }
+
+        #example_2{
+            width: 100px; height:100px;
+            padding: 10px;
+            border: 5px solid red;
+            margin:20px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 박스모델 ( Box-Model ) : 브라우저가 요소를 렌더링 할 때, 각각의 요소는 기본적으로 사각형 형태로 영역을 형성 -->
+    <!-- 이 영역을 '박스'라 표현하며, CSS는 박스의 크기, 위치, 속성(색, 배경, 테두리 모양 등)을 결정할 수 있음 -->
+    <!-- 1. 콘텐츠 영역 2. 안쪽 여백 3. 경계선(테두리) 4. 바깥쪽 여백 -->
+    
+    <!-- 박스 각 영역들의 크기를 정의할 수 있는 속성 -->
+    <!-- 1. 콘텐츠 영역 : width, height 2. 안쪽 여백 : padding 3. 바깥쪽 여백 : margin 4. 테두리 : border-width -->
+    <!-- + padding, margin 속성은 top, bottom, left, right 로 구분해서 정의할 수 있음 -->
+    <!-- + padding, margin 속성은 단축속성으로 ex) margin: 10px(top) 30px(right) 20px(bottom) 40px(left);로 정의할 수도 있음 => 시계방향 -->
+
+    <h2>박스 모델</h2><br>
+    <img src="images/box model.PNG" width="600" height="300">
+    <div id="example_1">박스모델 확인</div>
+
+    <hr>
+    <div id="example_2">padding, margin 확인</div>
+
+
+
+</body>
+</html>
