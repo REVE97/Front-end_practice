@@ -32,6 +32,17 @@
             border:5px solid blue;
             padding:10px 20px;
         }
+
+        #example_4{
+            box-sizing: border-box;
+            width:500px; height:500px;
+            border: 1px solid red;
+            background-color: rgb(64, 76, 103);
+            background-image: url(images/google.PNG);
+            background-repeat: no-repeat; /* 이미지를 반복하지 않을 때 no-repeat 사용 */
+            background-position: center; /* left top 이 기본값 */
+            background-size: 400px 400px;   /* cover 값으로 설정해서 화면을 꽉차게 설정 가능 ,contain 값으로 설정해서 이미지가 변형하지 않는 한도에서 최대 사이즈로 설정 */
+        }
     </style>
 </head>
 <body>
@@ -57,8 +68,13 @@
     <!-- box-sizing : 요소의 너비(width)와 높이(height)를 계산하는 방법을 지정 -->
     <!-- 1. content-box : 기본값으로 너비와 높이가 콘텐츠 영역만을 포함 2. border-box : 너비와 높이가 안쪽 여백과 테두리까지 포함 -->
 
+    <!-- background : 콘텐츠의 배경을 정의함, 단축 속성으로서 색상, 이미지, 반복 등 다양한 하위 속성을 정의할 수 있음 -->
+    <!-- 1. background-color : 배경 색을 정의 2. background-image : 배경 이미지를 정의 3. background-position : 배경 이미지의 초기 위치를 정의 -->
+    <!-- 4. background-size : 배경 이미지의 크기를 정의 5. background-repeat : 배경 이미지의 반복 방법을 정의 -->
+    <!-- background 속성은 암기보다는 필요한 셋팅값만을 설정하는 것이 좋음 -->
 
-
+    <hr>
+    <div id="example_4">Google</div>
 
 </body>
 </html>
