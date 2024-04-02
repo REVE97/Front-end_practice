@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grammer Practice 3</title>
+    <style>
+        #a {
+            width:100px; height:50px;
+            background-color: orange;
+            float: right;
+        }
+
+        #b{
+            width:100px; height:100px;
+            background-color: royalblue;
+            float: left;
+        }
+
+        p{
+            clear: left;
+        }
+
+        #position_1{
+            width:100px; height:100px;
+            background-color: red;
+            position: relative;
+            top: 100px; left: 100px;
+        }
+
+        #position_2{
+            width:200px; height: 200px;
+            background-color: yellow;
+            position: relative;
+            border: 1px solid black;
+        }
+
+        .abs{
+            width: 100px; height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- float 속성 : 요소가 문서의 일발적인 흐름에서 제외되어 자신을 포함하고 있는 컨테이너의 왼쪽이나 오른쪽에 배치 -->
+    <!-- 1. none ( 기본값 ) 2. left 3. right -->
+
+    <div id="a"></div>
+    <div id="b"></div>
+    <p>3rd Tag</p>
+
+    <!-- clear 속성 : float 요소 이후에 표시되는 요소가 float을 해제하여 float 요소의 아래로 내려가게 할 수 있음 -->
+    <!-- 1. none ( 기본값, 아래로 이동되지 않음  ) 2. left 3. right 4. both ( left 및 right인 요소의 아래로 내려감 ) -->
+    <!-- clear 속성을 편하게 사용할 때는 both 를 대부분으로 사용 -->
+
+    <!-- postion : 문서 상에 요소를 배치하는 방법을 정의, position이 요소의 배치 방법을 결정하면 top,bottom,right,left 가 최종위치를 결정하는 방식  -->
+    <!-- 1. static : 기본값 2. relative : 일반적인 문서 흐름에 따라 배치하며, 상하좌우 위치 값에 따라 오프셋을 적용함 -->
+    <!-- 3. absolute : 일반적인 문서 흐름에서 제거하고, 가장 가까운 position 지정 요소에 대해 상대적으로 오프셋을 적용함 -->
+    <!-- 4. fixed : 일반적인 문서 흐름에서 제거하고, 지정한 위치에 고정됨 -->
+    <!-- 5. sticky : 일반적인 문서 흐름에서 제거하고, 스크롤 동작이 존재하는 가장 가까운 요소에 대해 오프셋을 적용 -->
+
+    <hr>
+    <div id="position_1"></div><br><br><br><br><br>
+
+    <hr>
+    <div id="position_2"></div>
+    <div id="position_2">
+        <div class="abs"></div>
+    </div>
+
+
+
+</body>
+</html>
