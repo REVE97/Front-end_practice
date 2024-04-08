@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grammer Practice 4</title>
+
+    <style>
+        .container{
+            display:flex;
+            flex-direction: column;
+        }
+
+        .item{
+            width: 80px; height: 80px;
+            background-color: orange;
+        }
+
+        .container_2{
+            display:flex;
+            width:300px; height: 300px;
+            border: 2px solid black;
+            justify-content: space-around;  /* center, flex-end, flex-start, space-around, space-between 사용가능  */
+            align-items: center; 
+        }
+
+        .item_2{
+            width: 60px; height: 60px;
+            background-color: teal;
+        }
+
+        .self{
+            align-self: flex-start;
+        }
+
+        .container_3{
+            display: flex;
+            width: 300px; height: 300px;
+            border: 2px solid gray;
+            flex-wrap: wrap;      /* nowrap 이 기본값, wrap 을 사용해서 범위확장 */
+        }
+
+        .item_3{
+            width: 120px; height: 60px;
+            background-color: tomato;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- flexbox : 박스 내 요소 간의 공간 배분과 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 -->
+    <!-- 레이아웃을 다룰 때 한 번에 하나의 차원( 행이나 열 )만을 다룬다는 특성이 있다 -->
+    <!-- flex 컨테이너를 만들기 위해서는 컨테이너에 display:flex; 를 적용해야 함 -->
+    <!-- flexbox 에는 주축( main-axis )과 교차축( cross-axis )이 있다 -->
+
+    <!-- flex-direction 속성으로 flexbox 내 요소를 배치할 때 사용할 주축 및 방향( 정방향, 역방향 )을 지정 -->
+    <!-- 1. row ( 기본값 ) 2. row-reverse ( 주축은 행 방향은 콘텐츠와 반대 ) 
+         3. column ( 주축은 열 방향은 콘텐츠와 동일 ) 4. column-reverse ( 주축은 열 방향은 콘텐츠와 반대 ) -->
+
+    <!-- flexbox 배치 방법 속성 -->
+    <!-- 1. 주축 배치 방법 : justify-content 2. 교차축 배치 방법 : align-items -->
+    <!-- 3. 교차축 개별요소 배치 방법 : align-self 4. 줄 바꿈 여부 : flex-wrap -->
+
+    <h3>flexbox 연습 및 flex-direction 예제 연습</h3>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <hr>
+    <h3>flexbox 배치 방법 속성 연습</h3>
+    <div class="container_2">
+        <div class="item_2">1</div>
+        <div class="item_2 self">2</div>   <!-- self 만 추가해서 align-self 속성을 추가할 수 있음 -->
+        <div class="item_2">3</div>
+    </div>
+
+    <!-- item 요소가 container 요소보다 큰 범위를 가지게 될 때 flex-wrap 요소를 사용한다. -->
+
+    <hr>
+    <h3>flex-wrap 속성 연습</h3>
+    <div class="container_3">
+        <div class="item_3">1</div>
+        <div class="item_3">2</div>
+        <div class="item_3">3</div>
+    </div>
+
+</body>
+</html>
