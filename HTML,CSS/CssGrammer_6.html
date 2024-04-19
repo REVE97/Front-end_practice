@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grammer Practice 6</title>
+    <style>
+        [type="button"]{
+            width: 100px; height: 30px;
+            background-color: tomato; color: white;
+            border: none; border-radius: 8px;
+        }
+        [type="button"]:hover{
+            background-color: gray;
+        }
+        [type="button"]:active{  /*버튼일때는 active 상태가 마우스 클릭 */
+            background-color: black;
+        }
+
+        [type="text"]:focus{
+            background-color: red;
+            color: white;
+        }
+        [type="text"]:disabled{
+            height:100px;
+        }
+
+        body{
+            display:flex;
+            justify-content: space-between;
+        }
+        .box{
+            width: 50px; height: 50px;
+            background-color: blue; color: white;
+        }
+        .box:nth-child(3){      /*숫자 대신에 n,2n-1 와 같은 수식도 넣을 수 있다*/
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 의사클래스 (가상클래스)는 선택자에 추가하는 키워드, 요소가 어떤 특정한 상태가 되었을 때 요소를 선택하는 의미 -->
+    <!--  1. hover : 마우스 포인터가 요소에 올라가 있다 2. active : 사용자가 요소를 활성화했다 -->
+    <!--  3. focus : 요소가 포커스를 받고 있다 4. disabled : 비활성 상태의 요소이다  -->
+    <!--  5 . nth-child() : 형제 사이에서의 순서에 따라 요소를 선택한다 -->
+    <!--  이외에도 많은 클래스가 존재한다 -->
+
+    <input type="button" value="버튼">
+
+    <hr>
+    <input type="text" placeholder="빈칸" disabled>  <!-- disabled 는 값을 쓰기만하면 됨-->
+
+    <hr>
+    <div class="box">1번</div>
+    <div class="box">2번</div>
+    <div class="box">3번</div>
+    <div class="box">4번</div>
+    <div class="box">5번</div>
+    
+</body>
+</html>
