@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grammer Practice 8</title>
+
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px; height: 300px;
+            position: relative;
+
+            color: tomato;
+            font-size: 24px;
+            border: 3px dashed red;
+        }
+        p{
+            color:teal;  /* teal 대신에 inherit 사용시 tomato 로 적용됨 */
+            border: 1px solid tomato;
+        }
+
+        div:nth-child(1){background-color: yellow;}
+        div:nth-child(2){background-color: cyan; bottom: 50px;}
+        div:nth-child(3){background-color: ivory; bottom: 100px;}
+        div:nth-child(4){background-color: mediumblue; bottom: 150px;}
+    </style>
+</head>
+<body>
+    <!-- 상속이란 하위 요소가 상위 요소의 스타일 속성값을 물려받는 것을 의미 -->
+    <!-- 하위 요소의 스타일이 정의되면 그 스타일대로 표현 -->
+
+    <h2>상속은 다 되는 것은 아니다</h2>
+    <img src="images/inherit.png" width="600" height="300">
+
+    <hr>
+    
+    <div>
+        <p>Middle Tag</p>
+    </div>
+    
+
+    <!-- 공용 키워드 : 모든 CSS 속성에 사용가능한 키워드, "전역 값" 이라 표현하기도 함 -->
+    <!-- 1. inheirt : 상위 요소로부터 해당 속성의 값을 받아 사용한다 2. initial : 해당 속성의 기본값을 요소에 적용한다 -->
+    <!-- 3. unset : 상속 속성에 대해서는 inherit 처럼, 상속되지 않는 속성에 대해서는 initial 처럼 적용됨 -->
+
+    
+
+
+</body>
+</html>
