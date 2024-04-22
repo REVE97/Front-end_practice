@@ -73,3 +73,21 @@ while(true){
 }
 */
 
+document.write("<hr>");
+
+for(let i=0; i<10; i++){
+    document.write('Hello World!' + i + "<br>");
+}
+
+// 함수 (function)
+// 하나의 로직을 재실행 할 수 있도록 하는 것으로 코드의 재사용성을 높여준다, 유지보수에 용이해짐
+
+function numbering(){
+    document.write(1);
+}
+
+numbering();
+
+
+
+
