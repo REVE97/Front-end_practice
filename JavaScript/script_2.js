@@ -63,3 +63,13 @@ if((id == "reve" || id == "REVE") && password === "1234"){
 
 */
 
+// 반복문
+
+document.write("Coding everybody <br> ");   // document.write : 문자열을 화면에 출력
+
+/*
+while(true){
+    // document.write("Hello World!");
+}
+*/
+
