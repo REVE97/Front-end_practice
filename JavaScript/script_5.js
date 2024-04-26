@@ -31,6 +31,48 @@
     return MyApp.calculate.left + MyApp.calculate.right;
  }
  
- document.write("sum: " + sum());
+ document.write("sum: " + sum()+"<br>");
 
- 
+ // 함수와 콜백
+
+ // ex) 1   값으로서의 함수
+ function cal(func,num){
+   return func(num);
+ }
+
+ function increase(num){
+   return num+1;
+ }
+
+ function decrease(num){
+   return num-1;
+ }
+
+ document.write("increase: "+cal(increase,1)+"<br>");
+ document.write("decrease: "+cal(decrease,1)+"<br>");
+
+// ex ) 2  값으로서의 배열
+
+let process = [
+   function(input) {return input+10;},
+   function(input) {return input * input;},
+   function(input) {return input/2;}
+];
+
+let input = 1;
+for(let i = 0; i<process.length; i++){
+   input = process[i](input);
+}
+
+document.write("input: "+input+"<br>");
+
+
+// 콜백 ( CallBack )
+
+// ex ) 1
+let numbers = [20,10,9,8,7,6,5,4,3,2,1];
+let sortfunc = function(a,b){
+   document.write(a, b+"<br>");
+}
+
+document.write(numbers.sort(sortfunc));
