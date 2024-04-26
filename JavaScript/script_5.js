@@ -69,12 +69,12 @@ document.write("input: "+input+"<br>");
 
 // 콜백 ( CallBack )
 
-// ex ) 1
+// ex ) 1   콜백을 이용한 배열 정렬 
 let numbers = [20,10,9,8,7,6,5,4,3,2,1];
 let sortfunc = function(a,b){
    document.write(a + " ", b + "<br>");
-   // return a - b;
-   return b - a;  // 역순
+   return a - b;
+   // return b - a;  // 역순
 }
 
  document.write(numbers.sort(sortfunc));
