@@ -72,7 +72,9 @@ document.write("input: "+input+"<br>");
 // ex ) 1
 let numbers = [20,10,9,8,7,6,5,4,3,2,1];
 let sortfunc = function(a,b){
-   document.write(a, b+"<br>");
+   document.write(a + " ", b + "<br>");
+   // return a - b;
+   return b - a;  // 역순
 }
 
-document.write(numbers.sort(sortfunc));
+ document.write(numbers.sort(sortfunc));
