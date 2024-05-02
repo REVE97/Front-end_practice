@@ -20,7 +20,7 @@ import './App.css';
 function Header(props){
   return <header>
   <h1><a href="/" onClick={(event)=>{
-    event.preventDefault();
+    event.preventDefault();      // a 태그의 href 링크로 이동하지 않게 하는 합수 
     props.onChangeMode();
       }}>{props.title}</a></h1>
 </header>
