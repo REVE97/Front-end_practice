@@ -16,6 +16,7 @@
 
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';    // state 를 사용하기 위해 임포트   
 
 function Header(props){
   return <header>
@@ -32,7 +33,7 @@ function Nav(props){
     let t = props.topics[i];
     lis.push(<li key={t.id}><a id = {t.id} href={'/read/'+t.id} onClick={(event)=>{
       event.preventDefault();
-      props.onChangeMode(event.target.id);
+      props.onChangeMode(Number(event.target.id));     // id 값을 문자열에서 숫자로 converting
     }}>{t.title}</a>
     </li>);
   }
@@ -51,25 +52,45 @@ function Article(props){
 }
 
 function App() {
-  const mode=''
+  // const _mode = useState('WELCOME');    
+  // const mode = _mode[0];
+  // const setMode = _mode[1];
+  const [mode, setMode] = useState('WELCOME');   // state 구현, 위의 문법과 기능은 똑같음 // mode 의 이름은 사용자가 임의로 지정가능
+  const [id,setId] = useState(null); 
   
   const topics = [
     {id:1, title:'html', body:'html is ...'},
     {id:2, title:'css', body:'css is ...'},
     {id:3, title:'javascript', body:'javascript is ...'}
   ]
+  
+  let content = null;
+  if(mode === 'WELCOME'){
+    content = <Article title="Welcome" body="Hello, WEB"></Article>
+  } else if (mode === 'READ'){
+    let title, body = null;
+    for(let i =0; i<topics.length; i++){       // idState 와 topics 가 일치하는 값을 찾음
+      if(topics[i].id === id){
+        title = topics[i].title;
+        body = topics[i].body;
+      }
+    }
+    content = <Article title={title} body={body}></Article>
+  }
+  
   return (
     <div className="App">
       
       <Header title="WEB" onChangeMode={()=>{
-       alert('Header'); 
+       setMode('WELCOME');          // state 구현   
       }}></Header>
 
       <Nav topics={topics} onChangeMode={(id)=>{
-        alert(id);
+        setMode('READ');            // state 구현 
+        setId(id);
       }}></Nav>
 
-      <Article title="Welcome" body="Hello, WEB"></Article>
+      {content}
 
     </div>
   );
