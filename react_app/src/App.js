@@ -13,6 +13,12 @@
 // onChangeMode 라는 props 를 사용해서 구현
 
 // state 
+// {useState} 를 import 하여 setMode 를 사용하여  mode 변수로 구현 
+
+// create
+// form 태그를 사용하여 정보를 저장
+// onCreate 를 사용하여 구현
+
 
 import logo from './logo.svg';
 import './App.css';
@@ -51,6 +57,22 @@ function Article(props){
 </article>
 }
 
+function Create(props){
+  return <article>
+    <h2>Create</h2>
+    <form onSubmit={event=>{                // onSubmit : Submit 를 했을 때 form 에서 발생되는 이벤트
+      event.preventDefault();
+      const title = event.target.title.value;
+      const body = event.target.body.value;
+      props.onCreate(title, body);
+    }}>
+      <p><input type="text" nmae="title" placeholder='title'></input></p>
+      <p><textarea name='body' placeholder='body'></textarea></p>
+      <p><input type="submit" value="Create"></input></p>
+    </form>
+  </article>
+}
+
 function App() {
   // const _mode = useState('WELCOME');    
   // const mode = _mode[0];
@@ -76,6 +98,10 @@ function App() {
       }
     }
     content = <Article title={title} body={body}></Article>
+  } else if(mode === 'CREATE'){
+    content = <Create onCreate={(title, body)=>{
+
+    }}></Create>
   }
   
   return (
@@ -91,6 +117,11 @@ function App() {
       }}></Nav>
 
       {content}
+
+      <a href="/create" onClick={(event)=>{
+        event.preventDefault();
+        setMode('CREATE');
+      }}>Create</a>
 
     </div>
   );
