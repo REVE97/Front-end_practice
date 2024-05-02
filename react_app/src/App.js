@@ -40,15 +40,13 @@ function Article(props){
 function App() {
   const topics = [
     {id:1, title:'html', body:'html is ...'},
-    {id:2, title:'css', body:'html is ...'},
-    {id:3, title:'javascript', body:'html is ...'},
+    {id:2, title:'css', body:'css is ...'},
+    {id:3, title:'javascript', body:'javascript is ...'}
   ]
   return (
     <div className="App">
       
-      
-      
-      <Header title="REACT"></Header>
+      <Header title="WEB"></Header>
 
       <Nav topics={topics}></Nav>
 
