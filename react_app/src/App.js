@@ -70,7 +70,7 @@ function Create(props){
       const body = event.target.body.value;
       props.onCreate(title, body);
     }}>
-      <p><input type="text" nmae="title" placeholder='title'></input></p>
+      <p><input type="text" name="title" placeholder='title'></input></p>
       <p><textarea name='body' placeholder='body'></textarea></p>
       <p><input type="submit" value="Create"></input></p>
     </form>
@@ -88,8 +88,7 @@ function Update(props){
     const body = event.target.body.value;
     props.onUpdate(title, body);
   }}>
-    <p><input type="text" nmae="title" placeholder='title' value={title} onChange={event=>{
-      console.log(event.target.value);
+    <p><input type="text" name="title" placeholder='title' value={title} onChange={event=>{
       setTitle(event.target.value);
     }}></input></p>
     <p><textarea name='body' placeholder='body' value={body} onChange={event=>{
@@ -129,7 +128,8 @@ function App() {
       }
     }
     content = <Article title={title} body={body}></Article>
-    contextControl = <li><a href={"/update/"+ id} onClick={event=>{
+    contextControl = 
+    <li><a href={"/update/"+ id} onClick={event=>{
       event.preventDefault();
       setMode('UPDATE');
     }}>Update</a></li>   // update 링크 구현 
