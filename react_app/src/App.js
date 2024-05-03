@@ -22,6 +22,9 @@
 // update 
 // 저장한 정보를 수정하는 기능
 
+// delete
+// Button 을 활용하여 구현
+
 
 
 import logo from './logo.svg';
@@ -128,11 +131,22 @@ function App() {
       }
     }
     content = <Article title={title} body={body}></Article>
-    contextControl = 
+    contextControl =  <>
     <li><a href={"/update/"+ id} onClick={event=>{
       event.preventDefault();
       setMode('UPDATE');
-    }}>Update</a></li>   // update 링크 구현 
+    }}>Update</a></li>    
+    <li><input type="button" value="Delete" onClick={()=>{
+      const newTopics =[]
+      for(let i=0; i<topics.length; i++){
+        if(topics[i].id !== id){
+          newTopics.push(topics[i]);
+        }
+      }
+      setTopics(newTopics);
+      setMode('WELCOME');
+    }}></input></li>
+    </>
 
   } else if(mode === 'CREATE'){
     content = <Create onCreate={(_title, _body)=>{
