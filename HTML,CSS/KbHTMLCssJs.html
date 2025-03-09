@@ -1,0 +1,189 @@
+<!-- 2025.3.6 -->
+<!-- 통합강의: HTML,CSS,JS 교안 5,6-1,6-2장 -->
+<!-- 보충자료: 1-2장 -->
+<!-- 따로 공부할 내용
+1. 0 auto : 중앙정렬
+2. float: left ex)selector_id.html 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--1. hover 사용해서 테이블 반응 추가 -->
+    <style>
+        table  tr > th { color: red; }
+        tr:hover { background-color: aqua; }
+    </style>
+
+    <!--2. position(relative,absolute 개념 실습)-->
+    <!-- <style>
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        
+        .box:nth-child(1) {background-color: red; left: 10px; top:10px;}
+        .box:nth-child(2) {background-color: green; left: 50px; top:50px;}
+        .box:nth-child(3) {background-color: blue; left: 90px; top:90px;}
+
+        #container {
+            position: relative;
+        }
+    </style> -->
+
+    <!--3. 선택자 개념 실습 -->
+    <!-- <style>
+        /* * {
+            color: orange;
+        }
+
+        span {
+            background-color: red;
+        }
+
+        #first {
+            background-color: blue;
+        }
+
+        .second {
+            background-color: green;
+        }
+
+        #orange {
+            color: red;
+        }  */
+
+        /* 1번 pdf 50장 실습 (복합 선택자) */
+        /* p.lion {
+            background-color: red;
+        }
+
+        ul > .lion {
+            background-color: green;
+        }
+
+        ul #tiger {
+            background-color: yellow;
+        }
+
+        .lion {
+            color: white;
+        }
+
+        .zoo .lion {
+            font-weight: bold;
+        }
+
+        #tiger + li {
+            background-color: skyblue;
+        }
+
+        .lion ~ li {
+            background-color: orange;
+        } */
+
+        /* 1번 pdf 59장 가상 클래스 선택자 실습 */
+        /* h1:hover {
+            color:blue;
+        }
+
+        h1:active {
+            color: red;
+        }
+
+        input:focus {
+            background-color: orange;
+        }*/
+
+    </style> -->
+    
+</head>
+<body>
+    <!--1. hover 사용해서 테이블 반응 추가 -->
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+    </table>
+
+    <!--2. position(relative,absolute 개념 실습)-->
+    <!-- Hello
+    <div id="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+
+    <!--3. 선택자 개념 실습 -->
+    <!-- <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li id="orange" class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+
+    <h1>KB 선택자 예제</h1>
+    <p>선택자 사용 연습을 해봅시다</p>
+    <span>기본 선택자를 위한 예제입니다.</span>
+    <ul>
+        선택자로 선택하기
+        <li id="first">1</li>
+        <li class="second">2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul> -->
+
+    <!-- 1번 pdf 50장 실습 (복합 선택자)-->
+    <!-- <h1>복합 선택자 사용 연습</h1>
+    <p>동물원에 왔어요</p>
+    <div class="zoo">
+        <ul>
+            여긴 사파리!
+            <li>곰</li>
+            <li id="tiger">호랑이</li>
+            <li>팬더</li>
+            <li class="lion">사자</li>
+            <li>사육사</li>
+            <li>사육사2</li>
+        </ul>
+        <span class="lion">사파리 밖의 사자</span>
+    </div>
+    <p class="lion">동물원 밖의 사자</p> -->
+
+    <!-- 1번 pdf 59장 실습 (가상 클래스 선택자) -->
+    <!-- <h1>Hello, CSS</h1>
+    <h1>Click This!</h1>
+    <input type="text" /> -->
+
+    
+</body>
+</html>
