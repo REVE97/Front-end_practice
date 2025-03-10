@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@import url('reset.css');
+
+
+header {
+  width: 90%;
+  border-bottom: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 5vw;
+  background-color: gray;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+header h1 a {
+  font: bold 24px/50px 'Libre Baskerville';
+  color: #555;
+  text-decoration-line: none;
+}
+
+header .btn_menu {
+  font-size: 24px;
+  color: #333;
+  display: none;
+}
+
+/* GNB */
+header #gnb {
+  display: flex;
+}
+
+header #gnb li {
+  margin: 0px 20px;
+}
+
+header #gnb li a {
+  font: 16px/1 'Bebas Neue';
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* SNS */
+header .sns {
+  display: flex;
+}
+
+header .sns li {
+  margin: 0px 20px;
+}
+
+header .sns li a {
+  font: 16px/1 'Libre Baskerville';
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* VIDEO */
+figure video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure .text {
+  position: absolute;
+  left: 6vw;
+  top: 45%;
+  transform: translate(0, -50%);
+}
+
+figure .text p {
+  font: normal 8vw/1 'Libre Baskerville';
+  color: rgb(218, 218, 218);
+}
+
+figure .text ul {
+  display: flex;
+  margin-top: 30px;
+}
+
+figure .text ul li {
+  margin: 0px 30px;
+}
+
+figure .text ul a {
+  text-decoration-line: none;
+}
+
+figure .text ul li strong {
+  font: 14px/1 'Bebas Neue';
+  color: white;
+  letter-spacing: 1px;
+}
+
+
+/* FOOTER */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font: 12px/1 "Libre Baskerville";
+  color: rgb(218, 218, 218);
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 5vh 5vw;
+  z-index: 2;
+}
