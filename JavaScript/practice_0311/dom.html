@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <!-- DOM 연습 -->
+    <!-- <div class="box">box</div>
+    <div id="box">idBox</div> -->
+
+    <!-- div{$}*7 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+
+    <!-- onClick 연습 -->
+    <div class="box" onclick="test()">Click</div>
+
+    <!-- 버튼 생성 -->
+    <button id="btn">클릭</button>
+
+    <script>
+        // const box = document.querySelector('.box');
+        // console.log('box: ',box);
+
+        // const idBox = document.getElementById('box');
+        // console.log('idBox: ',idBox);
+
+        const boxEls = document.querySelectorAll('div');
+        console.log("🚀 ~ boxEls:", boxEls); // 변수에 Ctrl + Alt + L 눌러서 console.log 문장생성
+
+        //알림 함수
+        function test() {
+            alert("TEST");
+        }
+        
+        //addEventListener 이벤트 버튼 함수
+        const btnEl = document.querySelector('#btn');
+        btnEl.addEventListener('click', test);
+
+    </script>
+</body>
+</html>
