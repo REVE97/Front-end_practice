@@ -1,5 +1,5 @@
 //2025.3.13
-//오후 보충자료: Node 2장(비동기,CallBack,Promise)
+//오후 보충자료: Node 2장(비동기,CallBack,Promise,Async)
 
 //공부할 것
 //1. fs.readFile 
