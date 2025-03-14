@@ -1,0 +1,41 @@
+<!-- 2025.3.14 Day7 -->
+<!-- 오후 보충자료: Vue 1장 -->
+<!-- 1. 기초 Vue 사용 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 메인 메시지 -->
+        <h2> {{ message }} </h2>
+        <!-- 데이터 변경 버튼 생성 -->
+        <button @click="changeData">데이터 변경</button>
+    </div>
+    <script>
+    const { createApp, ref } = Vue;
+
+    createApp({
+        name: 'App',
+        data() { 
+            return {
+                message: 'Hello, vue world!',
+            };
+        },
+        //데이터 변경
+        methods: {
+            changeData() {
+                this.message = 'data를 변경';
+            }
+        }
+    }).mount('#app')
+    </script>
+</body>
+</html>
