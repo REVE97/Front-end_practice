@@ -1,0 +1,12 @@
+{
+  "name": "practice_0314",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animals-es6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
