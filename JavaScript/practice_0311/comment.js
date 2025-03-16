@@ -1,4 +1,5 @@
 //구조 분해, 전개, 객체 병합 실습
+
 const personalInfo = {
     name: '이효석',
     age: `Don't ask this :)`,
