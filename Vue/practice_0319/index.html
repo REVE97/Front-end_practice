@@ -1,0 +1,62 @@
+<!-- Day8 2025.3.19 -->
+<!-- 오후 보충강의: Vue 0장, 2장 -->
+
+<!--
+1. Try/Catch
+2. 배열함수
+3. 빌트인디렉티브 (v-bind, v-on, v-model)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <h2>message</h2>
+        <h2>{{ message }}</h2>
+
+        <!-- v-on -->
+        <button v-on:click="changeImgSrc">이미지 변경</button>
+        
+        <hr />
+
+        <!-- v-bind -->
+        <img v-bind:src="imgSrc" alt="마멋"/>
+        <img :src="imgSrc" alt="마멋"/>
+
+        <hr />
+
+        <!-- v-model-->
+        <h1>Text를 입력하세요.</h1>
+        <h1>{{ inputText }}</h1>
+        <input type="text" v-model="inputText" />
+    </div>
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            message: 'Hello, vue world!',
+            //v-bind
+            imgSrc: 'https://photo.coolenjoy.co.kr/data/editor/2008/20200813130955_aiqgbsrk.gif',
+            
+            //v-model
+            inputText: '',
+            };
+        },
+        methods: { 
+            changeImgSrc() { //v-on
+                this.imgSrc = 'https://search.pstatic.net/sunny/?src=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F272%2F146%2Fnon_2x%2Fdesktop-computer-vector.jpg&type=a340';
+            },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
