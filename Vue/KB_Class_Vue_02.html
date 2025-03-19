@@ -1,0 +1,43 @@
+<!-- Day8 2025.3.19 -->
+<!-- 통합강의: Vue 3장 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="app">
+        <!-- v-text, v-html 디렉티브 -->
+        <!-- <div v-html="message"></div> -->
+
+        <!-- v-bind 디렉티브 -->
+        <input type="text" v-bind:value="message">
+        <br />
+        <img v-bind:src="imagePath" />
+    </div>
+
+    <!-- CDN -->
+    <script src="http://unpkg.com/vue"></script>
+    
+    <script>
+        let model = { message: "<h2>Hello Vue3!</h2>" };
+        let vm = Vue.createApp({
+            name: "App",
+            data() {
+                // v-text,v-html 디렉티브
+                // return model;
+                
+                // v-bind 디렉티브
+                return {
+                    message: "v-bind 디렉티브",
+                    imagePath: "http://contactsvc.bmaster.kro.kr/photos/18.jpg"
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
