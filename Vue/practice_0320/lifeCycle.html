@@ -1,0 +1,44 @@
+<!-- 버튼 클릭 이벤트를 이용해서 백엔드로 부터 데이터를 받아 리스트로 출력 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <button @click="fetchFoods">데이터 받기</button> 
+        <h1>Tetz's favorite food list</h1>
+        <ul>
+            <li v-for="(food, index) in foods" :key="index">{{ food.food }}</li> 
+        </ul>
+    </div>
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            foods: [],
+          };
+        },
+        methods: {
+            async fetchFoods() { 
+            try {
+                const response = await fetch(
+            'https://port-0-tetz-night-back-m5yo5gmx92cc34bc.sel4.cloudtype.app/food/all'
+            );
+            this.foods = await response.json(); 
+            } catch (error) {
+            console.error('데이터를 가져오는 중 오류가 발생했습니다:', error); 
+                }
+            }, 
+        },
+    }).mount('#app');
+    </script>
+  </body>
+</html>
