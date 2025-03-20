@@ -1,0 +1,43 @@
+<!-- 버튼 이벤트 활용하여 숫자 증감 코드 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <h1>{{ count }}</h1>
+        <!-- 데이터 기반 처리 -->
+        <button v-on:click="countUp">UP+1</button> 
+        <button v-on:click="countDown">DOWN-1</button>
+
+        <!-- 이벤트 처리 -->
+        <button v-on:click="count++">+</button>
+        <button v-on:click="count--">-</button>
+    </div>
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            count:0,
+          };
+        },
+        methods: { 
+            countUp() {
+            this.count++; 
+            },
+            countDown() { 
+            this.count--;
+            },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
