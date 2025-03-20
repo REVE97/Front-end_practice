@@ -1,0 +1,94 @@
+<!-- Day9 2025.3.20 -->
+<!-- 통합강의: Vue 4장, 5장 -->
+
+<!-- 1. Vue 인스턴스 2. Vue 이벤트 처리 -->
+
+<!-- 1부터 N까지의 합 실습 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Practice</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 1보다 큰 수: <input type="text" v-model.number="num" />  -->
+        
+        <br />
+    
+        <!-- 계산된 속성 이용-->
+        <!-- 1부터 입력한 값까지의 합: <span>{{sum}}</span><br />
+        1부터 입력한 값까지의 합: <span>{{sum}}</span><br /> 
+        1부터 입력한 값까지의 합: <span>{{sum}}</span><br /> -->
+
+        <!-- 메소드 이용 -->
+        <!-- 1부터 입력한 값까지의 합: <span>{{sum()}}</span><br /> 
+        1부터 입력한 값까지의 합: <span>{{sum()}}</span><br /> 
+        1부터 입력한 값까지의 합: <span>{{sum()}}</span><br /> -->
+
+        <hr />
+
+        <!-- 이벤트 처리를 통한 입출금 기능 -->
+        [금액] <input type="text" v-model.number="amount" /> 
+        <br />
+        <br />
+        <button @click="deposit">입금</button>
+        <button @click="withdraw">인출</button> 
+        <br />
+        <h3>계좌 잔고 : [{{balance}}]</h3>
+
+    </div>
+    <script src="https://unpkg.com/vue"></script> 
+    <script>
+        let vm = Vue.createApp({ 
+        name: "App",
+        data() {
+        return { num: 0 , amount: 0, balance: 0,};
+        },
+        
+        // 계산된 속성 이용
+        // computed: {
+        // sum() {
+        // console.log("## num: " + this.num); 
+        // let n = parseInt(this.num);
+        // if (Number.isNaN(n)) return 0; 
+        // return (n * (n + 1)) / 2;
+        //     }, 
+        // },
+
+        // 메소드 이용
+        // methods: { 
+        // sum() {
+        // console.log("## num: " + this.num); 
+        // let n = parseInt(this.num);
+        // if (Number.isNaN(n)) return 0; 
+        // return (n * (n + 1)) / 2;
+        //     }, 
+        // },
+
+        // 이벤트 처리를 통한 입출금 기능
+        methods: { 
+            deposit() {
+            let amt = parseInt(this.amount); 
+            if (amt <= 0) {
+            alert("0보다    큰    값을    예금하세요."); 
+            } else {
+            this.balance += amt; 
+            }
+            }, 
+            withdraw() {
+            let amt = parseInt(this.amount); 
+            if (amt <= 0) {
+            alert("0보다    큰    값을    인출하세요."); 
+            } else if (amt > this.balance) {
+            alert("잔고보다    많은    금액을    인출할    수    없습니다."); 
+            } else {
+            this.balance -= amt; 
+            }
+            },
+        },
+    }).mount("#app");
+    </script>
+</body>
+</html>
