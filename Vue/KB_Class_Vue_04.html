@@ -1,0 +1,317 @@
+<!-- Day10 2025.3.21 -->
+<!-- 통합강의: 부트스트랩, Fontawesome -->
+<!-- 1. 부트스트랩 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <!-- 부트스트랩 Css,Js 파일 가져오기 -->
+    <link rel="stylesheet"   
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" > 
+    <script   
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> 
+    </script>
+
+    <style>
+        .container {
+            background-color: antiquewhite;
+        }
+        .container-fluid {
+            background-color: brown;
+        }
+        .col-sm-3 {
+            background-color: aqua;
+        }
+        .col-sm-4 {
+            background-color: aqua;
+        }
+        .col-sm-8 {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!--container -->
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p>
+        <p>The .container class provides a responsive fixed width container.</p> 
+    </div>
+
+    <!-- container-fluid -->
+    <div class="container-fluid">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container-fluid class.</p>
+        <p>The .container-fluid class provides a full width container, spanning the entire width of the 
+        viewport.</p>
+    </div>
+
+    <!-- container padding -->
+    <div class="container pt-5">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p>
+        <p>The .container class provides a responsive fixed width container.</p> 
+    </div>
+
+    <hr />
+
+    <!-- 컬럼 균등 분할 -->
+    <div class="row">
+        <div class="col-sm-3">.col-sm-3</div> 
+        <div class="col-sm-3">.col-sm-3</div> 
+        <div class="col-sm-3">.col-sm-3</div> 
+        <div class="col-sm-3">.col-sm-3</div>
+    </div>
+    <br />
+
+    <!-- 컬럼 비균등 분할 -->
+    <div class="row">
+        <div class="col-sm-4">.col-sm-4</div> 
+        <div class="col-sm-8">.col-sm-8</div>
+    </div>
+
+    <hr />
+
+    <!-- table -->
+    <table class="table table-striped"> 
+        <thead>
+            <tr>
+            <th>Firstname</th> 
+            <th>Lastname</th> 
+            <th>Email</th>
+            </tr> 
+        </thead> 
+        <tbody>
+        <tr>
+            <td>John</td> 
+            <td>Doe</td>
+            <td>john@example.com</td> 
+        </tr>
+        <tr>
+            <td>Mary</td> 
+            <td>Moe</td>
+            <td>mary@example.com</td> 
+        </tr>
+        <tr>
+            <td>July</td> 
+            <td>Dooley</td>
+            <td>july@example.com</td> 
+        </tr>
+        </tbody> 
+    </table>
+
+    <table class="table table-dark"> 
+        <thead>
+            <tr>
+            <th>Firstname</th> 
+            <th>Lastname</th> 
+            <th>Email</th>
+            </tr> 
+        </thead> 
+        <tbody>
+        <tr>
+            <td>John</td> 
+            <td>Doe</td>
+            <td>john@example.com</td> 
+        </tr>
+        <tr>
+            <td>Mary</td> 
+            <td>Moe</td>
+            <td>mary@example.com</td> 
+        </tr>
+        <tr>
+            <td>July</td> 
+            <td>Dooley</td>
+            <td>july@example.com</td> 
+        </tr>
+        </tbody> 
+    </table>
+
+    <!-- 반응형 table -->
+    <div class="table-responsive">
+        <table class="table table-striped"> 
+            <thead>
+                <tr>
+                <th>Firstname</th> 
+                <th>Lastname</th> 
+                <th>Email</th>
+                </tr> 
+            </thead> 
+            <tbody>
+            <tr>
+                <td>John</td> 
+                <td>Doe</td>
+                <td>john@example.com</td> 
+            </tr>
+            <tr>
+                <td>Mary</td> 
+                <td>Moe</td>
+                <td>mary@example.com</td> 
+            </tr>
+            <tr>
+                <td>July</td> 
+                <td>Dooley</td>
+                <td>july@example.com</td> 
+            </tr>
+            </tbody> 
+        </table>
+    </div>
+
+    <hr />
+
+    <!-- 버튼 -->
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-link">Link</button>
+    
+    <hr />
+
+    <!-- 스피너 -->
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span> 
+        </button>
+        <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span> 
+        Loading..
+        </button>
+        <button class="btn btn-primary" disabled>
+        <span class="spinner-border spinner-border-sm"></span> 
+        Loading..
+        </button>
+        <button class="btn btn-primary" disabled>
+        <span class="spinner-grow spinner-grow-sm"></span> 
+        Loading..
+    </button>
+
+    <hr />
+
+    <!-- 뱃지 -->
+    <span class="badge bg-primary">Primary</span>
+    <span class="badge bg-secondary">Secondary</span>
+    <span class="badge bg-success">Success</span>
+    <span class="badge bg-danger">Danger</span>
+    <span class="badge bg-warning">Warning</span>
+    <span class="badge bg-info">Info</span>
+    <span class="badge bg-light">Light</span>
+    <span class="badge bg-dark">Dark</span>
+
+    <hr />
+
+    <!-- 목록 관리 -->
+    <!-- 페이지네이션 -->
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li> 
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li> 
+        <li class="page-item"><a class="page-link" href="#">3</a></li> 
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+
+    <hr />
+
+    <!-- Breadcrumb -->
+    <ul class="breadcrumb justify-content-center">
+        <li class="breadcrumb-item"><a href="#">Photos</a></li>
+        <li class="breadcrumb-item"><a href="#">Summer 2017</a></li> 
+        <li class="breadcrumb-item"><a href="#">Italy</a></li>
+        <li class="breadcrumb-item active">Rome</li> 
+    </ul>
+
+    <hr />
+
+    <!-- 리스트 그룹 -->
+    <ul class="list-group">
+        <li class="list-group-item active">Active item</li> 
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li> 
+    </ul>
+
+    <hr />
+
+    <!-- card -->
+    <div class="card" style="width:400px">
+        <img class="card-img-top" width="200px" height="300px"src="data:image/jpeg;base64,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" alt="Card image"> 
+        <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text.</p>
+        <a href="#" class="btn btn-primary">See Profile</a> 
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- 네이게이션 -->
+    <nav class="navbar navbar-expand-sm bg-light"> 
+        <div class="container-fluid bg-light">
+        <a class="navbar-brand" href="#">Logo</a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav"> 
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a> 
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a> 
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a> 
+            </li>
+
+            <!-- DropDown 기능 추가 -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" 
+                data-bs-toggle="dropdown">Dropdown</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li> 
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+                </ul> 
+            </li>
+        </ul>
+
+        <!-- Form 버튼 넣기 -->
+        <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search"> 
+            <button class="btn btn-primary" type="button">Search</button>
+        </form>
+        </div>
+    </nav>
+
+    <hr />
+
+    <!-- Form -->
+    <div class="container mt-3">
+        <form >
+            <div class="mb-3 mt-3">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"> 
+            </div>
+            <div class="mb-3">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"> 
+            </div>
+            <div class="form-check mb-3">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label> 
+            </div>
+        <button type="submit" class="btn btn-primary">Submit</button> 
+        </form>
+    </div>
+
+    <hr />
+
+</body>
+</html>
