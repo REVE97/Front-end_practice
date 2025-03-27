@@ -1,0 +1,35 @@
+<!-- Day14 2025.3.27 -->
+<!-- 통합강의 : 9-1장, 9-2장 -->
+<!-- 
+1. Vue2 : 옵션기반 Vue3: 함수기반
+
+2. Vue3 부터는 component: { 자식 컴포넌트 } => 생략가능 
+
+3. Vue3 에서는 Vue2 기반의 data, methods, computed 옵션이 사라지고
+초기화 작업을 setup() 으로 통일함
+
+4. data 옵션에 해당, 기본 데이터 타입 : ref() , 참조 데이터 타입 : reactive()
+
+5. ref() : 기본타입의 값을 이용해 x.value 로 접근해야 함
+6. reactive() : 참조형에 대한 값을 이용해 state.x 로 접근해야 함
+7. 두개의 함수 import { ref, reactive } from 'vue' 로 사용
+
+8. <script setup> 태그를 사용하면 export default 를 사용할 필요가 없음
+  return 하지 않아도 됨 ( 태그안의 변수들은 리턴 대상이 됨 )
+  setup() 함수 내부 코드로 이용됨
+    
+-->
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
