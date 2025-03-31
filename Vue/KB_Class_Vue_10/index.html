@@ -1,5 +1,10 @@
 <!-- Day16 2025.3.31 -->
 <!-- 1. UI/UX 특강 -->
+<!-- 
+1. lorem120 + tab : 어떤 120 글자의 문장을 생성
+2. 태그 생성할 때 태그.Class명>하위요소 태그.class 명${$}*4 과 같이 축약식으로 생성할 수 있음
+
+-->
 
 <!DOCTYPE html>
 <html lang="">
@@ -7,10 +12,205 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>UI / UX</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f6f8fa;
+      }
+      .flex-container {
+        width: 300px;
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        /* 주축으로 정렬 */
+        justify-content: space-evenly;
+
+
+        /* 교차축으로 정렬 */
+        align-items: center;
+      }
+
+      .flex-item {
+        width: 50px;
+        color: white;
+        background-color: blue;
+      }
+
+      .flex-item:nth-child(2n) {
+        background-color: brown;
+      }
+
+
+      .header {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .header_title {
+        font-size: 1.5rem;
+      }
+
+      .layout {
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      .sidebar_nav ul {
+        list-style: none;
+      }
+
+      .sidebar_nav li {
+        margin-bottom: 1px;
+      }
+
+      .sidebar_nav a {
+        text-decoration: none;
+        color: darkgray;
+      }
+
+      .main {
+        background-color: white;
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+      }
+
+      .foster {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .foster_title {
+        font-size: 1.5rem;
+      }
+
+      /* Grid CSS */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(2, 100px);
+        grid-auto-rows: 100px;
+        row-gap: 1rem;
+        column-gap: 1rem;
+      }
+      .grid-item {
+        color: white;
+        background-color: red;
+      }
+      .grid-item:nth-child(2n) {
+        background-color: orange;
+      }
+      .grid-item:nth-child(3n) {
+        background-color: green;
+      }
+      .grid-item:nth-child(4n) {
+        background-color: hotpink;
+      }
+
+      /* 미디어 쿼리(Media Query) */
+      /* 미디어에 다른 쿼리(문법) */
+      /* CSS에서 화면 크기, 방향, 해상도, 기기 종류 등에 따라 다른 스타일을 적용할 수 있는 기능 */
+      
+      /* 미디어 타입 */
+      /* all, screen, print, speech */
+      /* 조건 */
+      /* min-width, max-width, min-height, max-height */
+
+      /* 태블릿 사이즈 */
+      /* 762 <= ?? <= 1024 */
+      @media screen and (min-width: 762px) {
+        h1 {
+          color: green;
+        }
+      }
+
+      /* 데스크탑 사이즈 */
+      /* ?? >= 1024 */
+      @media screen and (min-width: 1024px) {
+        h1 {
+          color: red;
+        }
+      }
+
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- <div id="app"></div>
+    <script type="module" src="/src/main.js"></script> -->
+
+    <hr />
+
+    <!--  div.flex-container>div.flex-item{$}*6 -->
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+    </div>
+
+    <hr />
+
+    <!-- 기본 웹페이지 메인 화면 구성 -->
+    <header class="header">
+      <h1 class="header_title">My project</h1>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <nav class="sidebar_nav">
+          <ul>
+            <li><a href="#">Introduce</a></li>
+            <li><a href="#">Installation</a></li>
+            <li><a href="#">Usage</a></li>
+            <li><a href="#">API</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <h2>Documentation</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, cul
+          pa ut repellat a reprehenderit blanditiis non amet rem sapiente atque,
+           accusantium totam consectetur consequuntur dolorem eligendi veniam nih
+           il unde. Debitis nobis, aliquid iure ducimus nam voluptates laborum provident deleniti, quae adipisci quo maiores facilis id nihil eum quod magnam. Ipsa provident, atque consectetur tempore assumenda reiciendis fuga sit eius in obcaecati autem, eos voluptatem, quis dicta facilis accusamus beatae debitis. Temporibus vero ratione soluta a sequi voluptatibus ipsum dolores, consequuntur aliquam possimus! Natus velit culpa et odio adipisci asperiores unde, corporis sunt rerum officia omnis itaque qui totam inventore ab, ratione architecto placeat ipsum nihil error. Itaque necessitatibus autem neque eius, exercitationem quibusdam distinctio vitae, sed cumque nemo asperiores at!</p>
+      </main>
+      
+    </div>
+    
+    <div class="foster">
+      <h1 class="foster_title">2025.3.31</h1>
+    </div>
+
+    <hr />
+
+    <!-- Grid CSS 실습 -->
+    <h2>Grid</h2>
+    <!-- div.grid-container>div.grid-item{$}*4 -->
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+
   </body>
 </html>
