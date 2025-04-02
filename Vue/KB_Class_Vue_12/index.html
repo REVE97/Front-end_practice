@@ -1,0 +1,34 @@
+<!-- Day18 2025.4.2 -->
+<!-- 통합강의 : 11장, 11.2장 -->
+<!-- 1. axios HTTP 통신 -->
+
+<!--
+1. REST API : 정보를 자원으로 간주 - 각 자원에게 URI 배정 - 조작은 HTTP 메소드로 표현
+2. json server 통신 :
+* 전역 패키지 설치 : npm install -g json-server
+1) db.json 작성
+2) 서버 기동 : json-server json파일 or npx json-server json 파일
+3) 기동 확인 : localhost:3000
+
+* Thunder Client 에서 확인
+1) 확인: GET http://localhost:3000/todos/ id number
+2) 추가 : POST http://localhost:3000/todos
+3) 수정 : PUT http://localhost:3000/todos/ 수정
+4) 삭제 : DELETE http://localhost:3000/todos/ 삭제
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
