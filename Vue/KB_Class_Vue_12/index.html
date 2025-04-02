@@ -1,6 +1,6 @@
 <!-- Day18 2025.4.2 -->
 <!-- 통합강의 : 11장, 11.2장 -->
-<!-- 1. axios HTTP 통신 -->
+<!-- 1. REST API 2. axios HTTP 통신 -->
 
 <!--
 1. REST API : 정보를 자원으로 간주 - 각 자원에게 URI 배정 - 조작은 HTTP 메소드로 표현
@@ -11,10 +11,14 @@
 3) 기동 확인 : localhost:3000
 
 * Thunder Client 에서 확인
-1) 확인: GET http://localhost:3000/todos/ id number
+1) 확인: GET http://localhost:3000/todos/id_number
 2) 추가 : POST http://localhost:3000/todos
-3) 수정 : PUT http://localhost:3000/todos/ 수정
-4) 삭제 : DELETE http://localhost:3000/todos/ 삭제
+3) 수정 : PUT http://localhost:3000/todos/id_number -Body 에서 수정
+4) 삭제 : DELETE http://localhost:3000/todos/id_number
+
+3. axios 통신 : HTTP 기반 통신을 지원하는 자바스크립트 라이브러리
+* axios 설치 : npm install axios 
+
 
 
 -->
