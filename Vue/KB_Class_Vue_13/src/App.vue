@@ -38,13 +38,11 @@ const addTodo = async ({ todo, desc }, successCallback) => {
 const updateTodo = async ({ id, todo, desc, done }, successCallback) => {
   try {
     const payload = { id, todo, desc, done };
-    const response = await axios.put(`${BASEURI}/${id}`, payload);
+    const response = await axios.put(BASEURI + `/${id}`, payload);
     if (response.status === 200) {
       let index = states.todoList.findIndex((item) => item.id === id);
-      if (index !== -1) {
-        states.todoList.splice(index, 1, payload);
-        successCallback();
-      }
+       states.todoList.splice(index, 1, payload);
+       successCallback();
     } else {
       alert('Todo 변경 실패');
     }
