@@ -1,1 +1,1 @@
-# HTML,CSS,JS,REACT,VUE Practice
+# HTML5, CSS3, JavaScript, REACT, VUE3
